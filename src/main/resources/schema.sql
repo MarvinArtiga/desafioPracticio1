@@ -1,27 +1,12 @@
---
--- Tablas de la base de datos: `guia_jpa`
---
+CREATE TABLE IF NOT EXISTS materia (
+id BIGINT AUTO_INCREMENT PRIMARY KEY,
+nombre VARCHAR(255)
+    );
 
--- ----------------------------------------------------------------
---  TABLE POST
--- ----------------------------------------------------------------
-CREATE TABLE POST (
-    ID INT NOT NULL,
-    TITLE VARCHAR(1000) NOT NULL,
-	POST_DATE DATE NOT NULL,
-    PRIMARY KEY (ID)
-);
-
--- ----------------------------------------------------------------
---  TABLE POST_COMMENT
--- ----------------------------------------------------------------
-CREATE TABLE POST_COMMENT (
-    ID INT NOT NULL,
-    REVIEW VARCHAR(1000) DEFAULT NULL,
-	COMMENT_DATE DATE NOT NULL,
-    POST_ID INT DEFAULT NULL,
-    PRIMARY KEY(ID),
-    CONSTRAINT FK_POST_COMMENT_POST_ID
-        FOREIGN KEY (POST_ID)
-            REFERENCES POST(ID)
-);
+CREATE TABLE IF NOT EXISTS alumno (
+id BIGINT AUTO_INCREMENT PRIMARY KEY,
+nombre VARCHAR(255),
+apellido VARCHAR(255),
+id_materia BIGINT,
+FOREIGN KEY (id_materia) REFERENCES materia(id)
+    );

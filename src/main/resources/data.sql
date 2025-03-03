@@ -1,23 +1,11 @@
-INSERT INTO POST (
-    ID,
-    TITLE,
-    POST_DATE
-)
-VALUES (
-	1,
-    'SpringBoot as a back-end',
-    '2023-09-29'
-);
+INSERT INTO materia (nombre) VALUES ('Matemáticas');
+INSERT INTO materia (nombre) VALUES ('Ciencias');
+INSERT INTO materia (nombre) VALUES ('Historia');
+INSERT INTO materia (nombre) VALUES ('Filosofía');
+INSERT INTO materia (nombre) VALUES ('Inglés');
 
-INSERT INTO POST_COMMENT (
-    ID,
-    REVIEW,
-    COMMENT_DATE,
-    POST_ID
-)
-VALUES (
-	1,
-    'Great post',
-    '2023-10-05',
-    1
-);
+INSERT INTO alumno (nombre, apellido, id_materia) VALUES ('Juan', 'Pérez', 1);
+INSERT INTO alumno (nombre, apellido, id_materia) VALUES ('Ana', 'Gómez', 2);
+INSERT INTO alumno (nombre, apellido, id_materia) VALUES ('Luis', 'Martínez', 3);
+INSERT INTO alumno (nombre, apellido, id_materia) VALUES ('Carlos', 'Ramírez', 4);
+INSERT INTO alumno (nombre, apellido, id_materia) VALUES ('María', 'Rodríguez', 5);
